@@ -66,7 +66,7 @@ const LeaderboardTable = () => {
   };
 
   return (
-    <div className="overflow-x-auto w-full rounded-xl border border-q3-stroke-light scrollbar-hide">
+    <div className="overflow-x-auto w-full rounded-xl border border-q3-stroke-light scrollbar-hide" style={{ touchAction: 'pan-x pan-y' }}>
       <div className="max-h-[calc(100vh-200px)] md:h-[calc(100vh-200px)] overflow-y-auto scrollbar-hide">
         <table className="min-w-full border-collapse">
           <thead className="bg-q3-surface-dim sticky top-0 z-10">
