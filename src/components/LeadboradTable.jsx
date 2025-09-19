@@ -15,7 +15,7 @@ const LeaderboardTable = () => {
   };
 
   useEffect(() => {
-    if (width <= 1024) {
+    if (width < 1024) {
       const startIndex = page * usersPerPage;
       const endIndex = startIndex + usersPerPage;
       setPageStudents(leaderboard.slice(startIndex, endIndex));
@@ -27,7 +27,7 @@ const LeaderboardTable = () => {
   }, [leaderboard, page, width]);
 
   const totalPages =
-    width <= 1024
+    width < 1024
       ? Math.ceil(leaderboard.length / usersPerPage)
       : Math.ceil((leaderboard.length - 3) / usersPerPage);
 
