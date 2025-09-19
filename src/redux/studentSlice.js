@@ -21,6 +21,7 @@ const initialState = {
   error: null,
   theme: "light",
   user: null,
+  isScrolling: false,
 };
 
 const studentSlice = createSlice({
@@ -41,6 +42,9 @@ const studentSlice = createSlice({
     setUser: (state, action) => {
       state.user = action.payload;
     },
+    setIsScrolling: (state, action) => {
+      state.isScrolling = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -58,6 +62,6 @@ const studentSlice = createSlice({
   },
 });
 
-export const { clearLeaderboard, toggleTheme, setTheme, setUser } =
+export const { clearLeaderboard, toggleTheme, setTheme, setUser, setIsScrolling } =
   studentSlice.actions;
 export default studentSlice.reducer;

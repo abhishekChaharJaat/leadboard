@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import LeadboradCard from "../components/LeadboradCard";
-import { fetchLeaderboard, setUser } from "../redux/studentSlice";
+import {
+  fetchLeaderboard,
+  setUser,
+  setIsScrolling,
+} from "../redux/studentSlice";
 import { useDispatch, useSelector } from "react-redux";
 import LeaderboardTable from "../components/LeadboradTable";
 import LeaderboardCardSkeleton from "../components/LeaderboardCardSkeleton";
@@ -14,6 +18,32 @@ const Leadboard = () => {
 
   useEffect(() => {
     dispatch(fetchLeaderboard());
+  }, [dispatch]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth > 1024) {
+        if (scrollTop > 0) {
+          dispatch(setIsScrolling(true));
+        } else {
+          dispatch(setIsScrolling(false));
+        }
+      } else {
+        dispatch(setIsScrolling(false));
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      dispatch(setIsScrolling(false));
+    };
   }, [dispatch]);
 
   //  top 4 card
