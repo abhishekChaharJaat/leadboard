@@ -90,13 +90,13 @@ const LeaderboardTable = () => {
                     className="text-[10px] w-6 h-6 border border-q3-stroke-normal bg-[#D2DFEB] rounded-full flex items-center justify-center font-medium"
                     style={{
                       ...getRankStyle(
-                        width <= 1024
+                        width < 1024
                           ? page * usersPerPage + index + 1
                           : 3 + page * usersPerPage + index + 1
                       ),
                     }}
                   >
-                    {width <= 1024
+                    {width < 1024
                       ? page * usersPerPage + index + 1
                       : 3 + page * usersPerPage + index + 1}
                   </span>
