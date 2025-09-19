@@ -28,38 +28,38 @@ const LeaderboardTableSkeleton = () => {
               >
                 <td className="py-2 px-1 md:py-3 md:px-2">
                   <div className="flex justify-center items-center">
-                    <div className="w-6 h-6 rounded-full bg-gray-200 animate-pulse" />
+                    <div className="w-6 h-6 rounded-full bg-q3-surface-dim animate-pulse" />
                   </div>
                 </td>
                 <td className="py-2 px-1 md:py-3 md:px-2">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-gray-200 animate-pulse flex-shrink-0" />
-                    <div className="h-4 w-20 md:w-24 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-20 md:w-24 bg-q3-surface-dim rounded animate-pulse" />
                   </div>
                 </td>
                 <td className="py-2 px-1 md:py-3 md:px-2">
                   <div className="flex justify-center">
-                    <div className="h-6 w-16 rounded-full bg-gray-200 animate-pulse" />
+                    <div className="h-6 w-16 rounded-full bg-q3-surface-dim animate-pulse" />
                   </div>
                 </td>
                 <td className="py-2 px-1 md:py-3 md:px-2">
                   <div className="flex justify-center">
-                    <div className="h-4 w-8 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-8 bg-q3-surface-dim rounded animate-pulse" />
                   </div>
                 </td>
                 <td className="py-2 px-1 md:py-3 md:px-2">
                   <div className="flex justify-center">
-                    <div className="h-4 w-8 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-8 bg-q3-surface-dim rounded animate-pulse" />
                   </div>
                 </td>
                 <td className="py-2 px-1 md:py-3 md:px-2">
                   <div className="flex justify-center">
-                    <div className="h-4 w-8 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-8 bg-q3-surface-dim rounded animate-pulse" />
                   </div>
                 </td>
                 <td className="py-2 px-1 md:py-3 md:px-2">
                   <div className="flex justify-center">
-                    <div className="h-4 w-12 bg-gray-200 rounded animate-pulse" />
+                    <div className="h-4 w-12 bg-q3-surface-dim rounded animate-pulse" />
                   </div>
                 </td>
               </tr>
@@ -68,11 +68,11 @@ const LeaderboardTableSkeleton = () => {
             <tr className="text-center text-q3-neutral-default bg-q3-surface-default border border-q3-stroke-light sticky bottom-0">
               <td colSpan={7} className="py-3">
                 <div className="flex gap-2 justify-center items-center">
-                  <div className="w-16 h-10 rounded-full bg-gray-200 animate-pulse" />
-                  <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse" />
-                  <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse" />
-                  <div className="w-8 h-8 rounded-full bg-gray-200 animate-pulse" />
-                  <div className="w-16 h-10 rounded-full bg-gray-200 animate-pulse" />
+                  <div className="w-16 h-10 rounded-full bg-q3-surface-dim animate-pulse" />
+                  <div className="w-8 h-8 rounded-full bg-q3-surface-dim animate-pulse" />
+                  <div className="w-8 h-8 rounded-full bg-q3-surface-dim animate-pulse" />
+                  <div className="w-8 h-8 rounded-full bg-q3-surface-dim animate-pulse" />
+                  <div className="w-16 h-10 rounded-full bg-q3-surface-dim animate-pulse" />
                 </div>
               </td>
             </tr>

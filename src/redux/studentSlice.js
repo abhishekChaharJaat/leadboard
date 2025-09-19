@@ -19,7 +19,7 @@ const initialState = {
   leaderboard: [],
   status: "idle",
   error: null,
-  theme: "light",
+  theme: localStorage.getItem("theme") || "light",
   user: null,
   isScrolling: false,
 };
@@ -35,9 +35,11 @@ const studentSlice = createSlice({
     },
     toggleTheme: (state) => {
       state.theme = state.theme === "light" ? "dark" : "light";
+      localStorage.setItem("theme", state.theme);
     },
     setTheme: (state, action) => {
       state.theme = action.payload;
+      localStorage.setItem("theme", action.payload);
     },
     setUser: (state, action) => {
       state.user = action.payload;
