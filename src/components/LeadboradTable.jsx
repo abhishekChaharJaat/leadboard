@@ -66,7 +66,7 @@ const LeaderboardTable = () => {
   };
 
   return (
-    <div className="overflow-x-auto w-full rounded-xl border border-q3-stroke-light scrollbar-hide" style={{ touchAction: 'pan-x pan-y' }}>
+    <div className="overflow-x-auto w-full rounded-xl border border-q3-stroke-light scrollbar-hide">
       <div className="max-h-[calc(100vh-200px)] md:h-[calc(100vh-200px)] overflow-y-auto scrollbar-hide">
         <table className="min-w-full border-collapse">
           <thead className="bg-q3-surface-dim sticky top-0 z-10">
@@ -90,13 +90,13 @@ const LeaderboardTable = () => {
                     className="text-[10px] w-6 h-6 border border-q3-stroke-normal bg-[#D2DFEB] rounded-full flex items-center justify-center font-medium"
                     style={{
                       ...getRankStyle(
-                        width <= 748
+                        width <= 1024
                           ? page * usersPerPage + index + 1
                           : 3 + page * usersPerPage + index + 1
                       ),
                     }}
                   >
-                    {width <= 748
+                    {width <= 1024
                       ? page * usersPerPage + index + 1
                       : 3 + page * usersPerPage + index + 1}
                   </span>
